@@ -13,7 +13,7 @@
 - (IBAction)getFormData:(id)sender;
 - (IBAction)nextField:(UITextField*)currentField;
 
-@property (strong, atomic) NSMutableArray *contacts;
+@property (weak, atomic) NSMutableArray *contacts;
 
 @property (weak, nonatomic) IBOutlet UITextField *name;
 @property (weak, nonatomic) IBOutlet UITextField *telephone;

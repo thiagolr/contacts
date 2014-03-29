@@ -10,4 +10,6 @@
 
 @interface ContactListViewController : UITableViewController
 
+@property (weak, atomic) NSMutableArray *contacts;
+
 @end

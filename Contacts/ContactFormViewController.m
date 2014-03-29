@@ -18,9 +18,7 @@
 - (id)init
 {
     self = [super init];
-    if (self) {
-        self.contacts = [[NSMutableArray alloc] init];
-        
+    if (self) {        
         UIBarButtonItem* btn1 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(finish)];
         
         UIBarButtonItem* btn2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(createContact)];
@@ -68,12 +66,9 @@
     Contact* contact = [self getContact];
     
     [self.contacts addObject:contact];
+    NSLog(@"contact added: %@", contact);
     
     [self.view endEditing:YES];
-    
-    NSLog(@"contact added: %@", contact);
-    NSLog(@"contacts: %@", self.contacts);
-    
     [self finish];
 }
 

@@ -13,9 +13,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.contacts = [[NSMutableArray alloc] init];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     ContactListViewController* list = [[ContactListViewController alloc] init];
+    list.contacts = self.contacts;
+    
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:list];
     
     self.window.rootViewController = nav;
