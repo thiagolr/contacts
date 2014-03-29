@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 Venturus. All rights reserved.
 //
 
-#import "FormularioContatoViewController.h"
+#import "ContactFormViewController.h"
 #import "Contact.h"
 
-@interface FormularioContatoViewController ()
+@interface ContactFormViewController ()
 
 @end
 
-@implementation FormularioContatoViewController
+@implementation ContactFormViewController
 
 - (id)init
 {

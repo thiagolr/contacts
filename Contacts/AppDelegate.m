@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "FormularioContatoViewController.h"
+#import "ContactFormViewController.h"
 
 @implementation AppDelegate
 
@@ -15,7 +15,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    FormularioContatoViewController* form = [[FormularioContatoViewController alloc] init];
+    ContactFormViewController* form = [[ContactFormViewController alloc] init];
     self.window.rootViewController = form;
     
     // Override point for customization after application launch.

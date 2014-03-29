@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FormularioContatoViewController : UIViewController
+@interface ContactFormViewController : UIViewController
 
 - (IBAction)getFormData:(id)sender;
 - (IBAction)nextField:(UITextField*)currentField;
