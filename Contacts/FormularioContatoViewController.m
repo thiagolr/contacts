@@ -7,6 +7,7 @@
 //
 
 #import "FormularioContatoViewController.h"
+#import "Contact.h"
 
 @interface FormularioContatoViewController ()
 
@@ -33,6 +34,17 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)getFormData:(id)sender {
+    NSMutableDictionary* contact = [[NSMutableDictionary alloc] init];
+    [contact setObject:self.name.text forKey:@"name"];
+    [contact setObject:self.telephone.text forKey:@"telephone"];
+    [contact setObject:self.email.text forKey:@"email"];
+    [contact setObject:self.address.text forKey:@"address"];
+    [contact setObject:self.site.text forKey:@"site"];
+    
+    NSLog(@"contact added: %@", contact);
 }
 
 @end
