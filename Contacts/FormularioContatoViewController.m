@@ -15,6 +15,15 @@
 
 @implementation FormularioContatoViewController
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.contacts = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -37,17 +46,20 @@
 }
 
 - (IBAction)getFormData:(id)sender {
-    Contact* contact = [[Contact alloc] init];
     
+    Contact* contact = [[Contact alloc] init];
     contact.name = self.name.text;
     contact.telephone = self.telephone.text;
     contact.email = self.email.text;
     contact.address = self.address.text;
     contact.site = self.site.text;
     
+    [self.contacts addObject:contact];
+    
     [self.view endEditing:YES];
     
     NSLog(@"contact added: %@", contact);
+    NSLog(@"contacts: %@", self.contacts);
 }
 
 - (IBAction)nextField:(UITextField *)currentField {

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A59E27B218E6F64C001860DF /* FormularioContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59E27B018E6F64C001860DF /* FormularioContatoViewController.m */; };
 		A59E27B318E6F64C001860DF /* FormularioContatoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A59E27B118E6F64C001860DF /* FormularioContatoViewController.xib */; };
-		A59E27B618E70A5E001860DF /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = A59E27B518E70A5E001860DF /* Contact.m */; };
+		A59E27D318E73280001860DF /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = A59E27D218E73280001860DF /* Contact.m */; };
 		A5A01B7518E6F107001FCE87 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A01B7418E6F107001FCE87 /* UIKit.framework */; };
 		A5A01B7718E6F107001FCE87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A01B7618E6F107001FCE87 /* Foundation.framework */; };
 		A5A01B7918E6F107001FCE87 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A01B7818E6F107001FCE87 /* CoreGraphics.framework */; };
@@ -25,8 +25,8 @@
 		A59E27AF18E6F64C001860DF /* FormularioContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormularioContatoViewController.h; sourceTree = "<group>"; };
 		A59E27B018E6F64C001860DF /* FormularioContatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormularioContatoViewController.m; sourceTree = "<group>"; };
 		A59E27B118E6F64C001860DF /* FormularioContatoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormularioContatoViewController.xib; sourceTree = "<group>"; };
-		A59E27B418E70A5E001860DF /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Contact.h; path = ../Contact.h; sourceTree = "<group>"; };
-		A59E27B518E70A5E001860DF /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contact.m; path = ../Contact.m; sourceTree = "<group>"; };
+		A59E27D118E73280001860DF /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		A59E27D218E73280001860DF /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 		A5A01B7118E6F107001FCE87 /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5A01B7418E6F107001FCE87 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A5A01B7618E6F107001FCE87 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,8 +88,8 @@
 			children = (
 				A5A01B8318E6F107001FCE87 /* AppDelegate.h */,
 				A5A01B8418E6F107001FCE87 /* AppDelegate.m */,
-				A59E27B418E70A5E001860DF /* Contact.h */,
-				A59E27B518E70A5E001860DF /* Contact.m */,
+				A59E27D118E73280001860DF /* Contact.h */,
+				A59E27D218E73280001860DF /* Contact.m */,
 				A59E27AF18E6F64C001860DF /* FormularioContatoViewController.h */,
 				A59E27B018E6F64C001860DF /* FormularioContatoViewController.m */,
 				A59E27B118E6F64C001860DF /* FormularioContatoViewController.xib */,
@@ -181,7 +181,7 @@
 				A5A01B8118E6F107001FCE87 /* main.m in Sources */,
 				A5A01B8518E6F107001FCE87 /* AppDelegate.m in Sources */,
 				A59E27B218E6F64C001860DF /* FormularioContatoViewController.m in Sources */,
-				A59E27B618E70A5E001860DF /* Contact.m in Sources */,
+				A59E27D318E73280001860DF /* Contact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
