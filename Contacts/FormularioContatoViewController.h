@@ -11,6 +11,7 @@
 @interface FormularioContatoViewController : UIViewController
 
 - (IBAction)getFormData:(id)sender;
+- (IBAction)nextField:(UITextField*)currentField;
 
 @property (weak, nonatomic) IBOutlet UITextField *name;
 @property (weak, nonatomic) IBOutlet UITextField *telephone;

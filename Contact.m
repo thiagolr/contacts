@@ -10,4 +10,8 @@
 
 @implementation Contact
 
+- (NSString *)description {
+    return [NSString stringWithFormat:@"%@ <%@>", self.name, self.email];
+}
+
 @end

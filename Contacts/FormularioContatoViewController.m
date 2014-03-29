@@ -37,14 +37,21 @@
 }
 
 - (IBAction)getFormData:(id)sender {
-    NSMutableDictionary* contact = [[NSMutableDictionary alloc] init];
-    [contact setObject:self.name.text forKey:@"name"];
-    [contact setObject:self.telephone.text forKey:@"telephone"];
-    [contact setObject:self.email.text forKey:@"email"];
-    [contact setObject:self.address.text forKey:@"address"];
-    [contact setObject:self.site.text forKey:@"site"];
+    Contact* contact = [[Contact alloc] init];
+    
+    contact.name = self.name.text;
+    contact.telephone = self.telephone.text;
+    contact.email = self.email.text;
+    contact.address = self.address.text;
+    contact.site = self.site.text;
+    
+    [self.view endEditing:YES];
     
     NSLog(@"contact added: %@", contact);
+}
+
+- (IBAction)nextField:(UITextField *)currentField {
+    [[self.view viewWithTag:(currentField.tag + 1)] becomeFirstResponder];
 }
 
 @end
