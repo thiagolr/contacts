@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ContactFormViewController.h"
+#import "ContactListViewController.h"
 
 @implementation AppDelegate
 
@@ -15,8 +15,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    ContactFormViewController* form = [[ContactFormViewController alloc] init];
-    self.window.rootViewController = form;
+    ContactListViewController* list = [[ContactListViewController alloc] init];
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:list];
+    
+    self.window.rootViewController = nav;
     
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
