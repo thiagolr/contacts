@@ -92,8 +92,7 @@
 - (void)createContact {
     Contact* contact = [self getContact];
     
-    [self.contacts addObject:contact];
-    NSLog(@"contact added: %@", contact);
+    [self.contacts addContact:contact];
     
     [self.view endEditing:YES];
     [self finish];

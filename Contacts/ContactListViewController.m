@@ -25,9 +25,13 @@
     return self;
 }
 
+- (void)addContact:(Contact *)contact {
+    [self.contacts addObject:contact];
+}
+
 - (void)showForm {
     ContactFormViewController* form = [[ContactFormViewController alloc] init];
-    form.contacts = self.contacts;
+    form.contacts = self;
     
     [self.navigationController pushViewController:form animated:YES];
 }

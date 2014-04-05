@@ -8,8 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ContactListViewController : UITableViewController
+
+#import "ContactFormViewControllerDelegate.h"
+#import "Contact.h"
+
+@interface ContactListViewController : UITableViewController <ContactFormViewControllerDelegate>
 
 @property (weak, atomic) NSMutableArray *contacts;
+
+- (void) addContact:(Contact*)contact;
 
 @end

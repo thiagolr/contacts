@@ -43,6 +43,7 @@
 		A5A01B8618E6F107001FCE87 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A5A01B8818E6F107001FCE87 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A5A01B8A18E6F107001FCE87 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A5B7CD0018F06A5100538B7A /* ContactFormViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactFormViewControllerDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +97,7 @@
 				A59E27AF18E6F64C001860DF /* ContactFormViewController.h */,
 				A59E27B018E6F64C001860DF /* ContactFormViewController.m */,
 				A59E27B118E6F64C001860DF /* ContactFormViewController.xib */,
+				A5B7CD0018F06A5100538B7A /* ContactFormViewControllerDelegate.h */,
 				A59E27D418E73FF4001860DF /* ContactListViewController.h */,
 				A59E27D518E73FF4001860DF /* ContactListViewController.m */,
 				A5A01B7B18E6F107001FCE87 /* Supporting Files */,
