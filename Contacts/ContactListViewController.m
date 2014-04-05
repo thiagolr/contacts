@@ -16,10 +16,11 @@
 {
     self = [super init];
     if (self) {
-        UIBarButtonItem* btn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showForm)];
-                               
+        UIBarButtonItem* btnRight = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showForm)];
+        
         self.navigationItem.title = @"Contacts";
-        self.navigationItem.rightBarButtonItem = btn;
+        self.navigationItem.rightBarButtonItem = btnRight;
+        self.navigationItem.leftBarButtonItem = self.editButtonItem;
     }
     return self;
 }
@@ -29,6 +30,19 @@
     form.contacts = self.contacts;
     
     [self.navigationController pushViewController:form animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.contacts removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    Contact* contact = [self.contacts objectAtIndex:sourceIndexPath.row];
+    [self.contacts removeObjectAtIndex:sourceIndexPath.row];
+    [self.contacts insertObject:contact atIndex:destinationIndexPath.row];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
