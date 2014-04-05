@@ -10,6 +10,26 @@
 
 @implementation Contact
 
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super init];
+    if (self) {
+        self.name = [aDecoder decodeObjectForKey:@"name"];
+        self.telephone = [aDecoder decodeObjectForKey:@"telephone"];
+        self.email = [aDecoder decodeObjectForKey:@"email"];
+        self.address = [aDecoder decodeObjectForKey:@"address"];
+        self.site = [aDecoder decodeObjectForKey:@"site"];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder*)aCoder {
+    [aCoder encodeObject:self.name forKey:@"name"];
+    [aCoder encodeObject:self.telephone forKey:@"telephone"];
+    [aCoder encodeObject:self.email forKey:@"email"];
+    [aCoder encodeObject:self.address forKey:@"address"];
+    [aCoder encodeObject:self.site forKey:@"site"];
+}
+
 - (NSString *)description {
     return [NSString stringWithFormat:@"%@ <%@>", self.name, self.email];
 }

@@ -13,10 +13,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.contacts = [[NSMutableArray alloc] init];
+    NSArray* docDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString* docDir = docDirs[0];
+    self.filename = [NSString stringWithFormat:@"%@/contacts", docDir];
+    
+    self.contacts = [NSKeyedUnarchiver unarchiveObjectWithFile:self.filename];
+    if (!self.contacts) {
+        self.contacts = [[NSMutableArray alloc] init];
+    }
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
+
     ContactListViewController* list = [[ContactListViewController alloc] init];
     list.contacts = self.contacts;
     
@@ -40,6 +47,8 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    [NSKeyedArchiver archiveRootObject:self.contacts toFile:self.filename];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application

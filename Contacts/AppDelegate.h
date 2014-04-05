@@ -14,4 +14,6 @@
 
 @property (strong, atomic) NSMutableArray *contacts;
 
+@property (strong, atomic) NSString *filename;
+
 @end
