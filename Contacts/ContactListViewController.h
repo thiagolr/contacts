@@ -16,6 +16,8 @@
 
 @property (weak, atomic) NSMutableArray *contacts;
 
+@property (strong, atomic) NSIndexPath* selected;
+
 - (void) addContact:(Contact*)contact;
 
 @end

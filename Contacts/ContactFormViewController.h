@@ -18,7 +18,7 @@
 
 - (IBAction)nextField:(UITextField*)currentField;
 
-@property (weak, atomic) id<ContactFormViewControllerDelegate> contacts;
+@property (weak, atomic) id<ContactFormViewControllerDelegate> delegate;
 @property (strong, atomic) Contact* contact;
 
 @property (weak, nonatomic) IBOutlet UITextField *name;

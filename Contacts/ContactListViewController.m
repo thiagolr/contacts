@@ -25,19 +25,33 @@
     return self;
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    if (self.selected) {
+        [self.tableView selectRowAtIndexPath:self.selected animated:animated scrollPosition:UITableViewScrollPositionMiddle];
+    }
+    self.selected = nil;
+}
+
 - (void)addContact:(Contact *)contact {
     [self.contacts addObject:contact];
+    self.selected = [NSIndexPath indexPathForRow:[self.contacts indexOfObject:contact] inSection:0];
+}
+
+- (void)editContact:(Contact *)contact {
+    self.selected = [NSIndexPath indexPathForRow:[self.contacts indexOfObject:contact] inSection:0];
 }
 
 - (void)showForm {
     ContactFormViewController* form = [[ContactFormViewController alloc] init];
-    form.contacts = self;
+    form.delegate = self;
     
     [self.navigationController pushViewController:form animated:YES];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    ContactFormViewController* form = [[ContactFormViewController alloc] initWithContact:self.contacts[indexPath.row]];
+    Contact* contact = self.contacts[indexPath.row];
+    ContactFormViewController* form = [[ContactFormViewController alloc] initWithContact:contact];
+    form.delegate = self;
     
     [self.navigationController pushViewController:form animated:YES];
 }

@@ -92,7 +92,7 @@
 - (void)createContact {
     Contact* contact = [self getContact];
     
-    [self.contacts addContact:contact];
+    [self.delegate addContact:contact];
     
     [self.view endEditing:YES];
     [self finish];
@@ -101,7 +101,9 @@
 - (void)editContact {
     self.contact = [self getContact];
     
-    NSLog(@"contact edited: %@", self.contact);
+    if ([self.delegate respondsToSelector:@selector(editContact:)]) {
+        [self.delegate editContact:self.contact];
+    }
     
     [self.view endEditing:YES];
     [self finish];

@@ -12,6 +12,10 @@
 
 @protocol ContactFormViewControllerDelegate <NSObject>
 
+@required
 - (void)addContact:(Contact*)contact;
+
+@optional
+- (void)editContact:(Contact*)contact;
 
 @end
