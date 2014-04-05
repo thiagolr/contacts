@@ -7,7 +7,6 @@
 //
 
 #import "ContactFormViewController.h"
-#import "Contact.h"
 
 @interface ContactFormViewController ()
 
@@ -23,9 +22,26 @@
         
         UIBarButtonItem* btn2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(createContact)];
         
+        self.navigationItem.title = @"Add Contact";
+        self.navigationItem.leftBarButtonItem = btn1;
+        self.navigationItem.rightBarButtonItem = btn2;
+    }
+    return self;
+}
+
+- (id)initWithContact:(Contact*)contact
+{
+    self = [super init];
+    if (self) {
+        UIBarButtonItem* btn1 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(finish)];
+        
+        UIBarButtonItem* btn2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(editContact)];
+        
         self.navigationItem.title = @"Edit Contact";
         self.navigationItem.leftBarButtonItem = btn1;
         self.navigationItem.rightBarButtonItem = btn2;
+        
+        self.contact = contact;
     }
     return self;
 }
@@ -43,6 +59,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    if (self.contact) {
+        self.name.text = self.contact.name;
+        self.telephone.text = self.contact.telephone;
+        self.email.text = self.contact.email;
+        self.address.text = self.contact.address;
+        self.site.text = self.contact.site;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,14 +76,17 @@
 }
 
 - (Contact*)getContact {
-    Contact* contact = [[Contact alloc] init];
-    contact.name = self.name.text;
-    contact.telephone = self.telephone.text;
-    contact.email = self.email.text;
-    contact.address = self.address.text;
-    contact.site = self.site.text;
+    if (!self.contact) {
+        self.contact = [[Contact alloc] init];
+    }
     
-    return contact;
+    self.contact.name = self.name.text;
+    self.contact.telephone = self.telephone.text;
+    self.contact.email = self.email.text;
+    self.contact.address = self.address.text;
+    self.contact.site = self.site.text;
+    
+    return self.contact;
 }
 
 - (void)createContact {
@@ -67,6 +94,15 @@
     
     [self.contacts addObject:contact];
     NSLog(@"contact added: %@", contact);
+    
+    [self.view endEditing:YES];
+    [self finish];
+}
+
+- (void)editContact {
+    self.contact = [self getContact];
+    
+    NSLog(@"contact edited: %@", self.contact);
     
     [self.view endEditing:YES];
     [self finish];

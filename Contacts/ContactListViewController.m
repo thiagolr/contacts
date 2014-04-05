@@ -32,6 +32,12 @@
     [self.navigationController pushViewController:form animated:YES];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    ContactFormViewController* form = [[ContactFormViewController alloc] initWithContact:self.contacts[indexPath.row]];
+    
+    [self.navigationController pushViewController:form animated:YES];
+}
+
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [self.contacts removeObjectAtIndex:indexPath.row];

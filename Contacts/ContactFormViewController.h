@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Contact.h"
 
 @interface ContactFormViewController : UIViewController
 
-- (IBAction)getFormData:(id)sender;
+- (id)initWithContact:(Contact*)contact;
+
 - (IBAction)nextField:(UITextField*)currentField;
 
 @property (weak, atomic) NSMutableArray *contacts;
+@property (strong, atomic) Contact *contact;
 
 @property (weak, nonatomic) IBOutlet UITextField *name;
 @property (weak, nonatomic) IBOutlet UITextField *telephone;
