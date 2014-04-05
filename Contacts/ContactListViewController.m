@@ -25,6 +25,13 @@
     return self;
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    UILongPressGestureRecognizer* lp =[[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(showMenu:)];
+    [self.tableView addGestureRecognizer:lp];
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     if (self.selected) {
         [self.tableView selectRowAtIndexPath:self.selected animated:animated scrollPosition:UITableViewScrollPositionMiddle];
@@ -39,6 +46,38 @@
 
 - (void)editContact:(Contact *)contact {
     self.selected = [NSIndexPath indexPathForRow:[self.contacts indexOfObject:contact] inSection:0];
+}
+
+- (void)showMenu:(UIGestureRecognizer*)gesture {
+    if (gesture.state == UIGestureRecognizerStateBegan) {
+        CGPoint point = [gesture locationInView:self.tableView];
+        NSIndexPath* ip = [self.tableView indexPathForRowAtPoint:point];
+        selectedContact = self.contacts[ip.row];
+        UIActionSheet* menu = [[UIActionSheet alloc] initWithTitle:selectedContact.name delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Call", @"Send e-mail", @"Show map", @"Go to site", nil];
+        
+        [menu showInView:self.view];
+    }
+}
+
+- (void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    switch (buttonIndex) {
+        case 0:
+            // [self call];
+            NSLog(@"call: %@", selectedContact.telephone);
+            break;
+        case 1:
+            // [self sendEmail];
+            NSLog(@"send e-mail to: %@", selectedContact.email);
+            break;
+        case 2:
+            // [self showMap];
+            NSLog(@"show map: %@", selectedContact.address);
+            break;
+        case 3:
+            // [self goToSite];
+            NSLog(@"go to site: %@", selectedContact.site);
+            break;
+    }
 }
 
 - (void)showForm {

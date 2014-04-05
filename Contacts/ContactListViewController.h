@@ -12,7 +12,11 @@
 #import "ContactFormViewControllerDelegate.h"
 #import "Contact.h"
 
-@interface ContactListViewController : UITableViewController <ContactFormViewControllerDelegate>
+@interface ContactListViewController : UITableViewController <ContactFormViewControllerDelegate, UIActionSheetDelegate> {
+
+    Contact* selectedContact;
+    
+}
 
 @property (weak, atomic) NSMutableArray *contacts;
 
