@@ -62,20 +62,20 @@
 - (void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
         case 0:
-            // [self call];
             NSLog(@"call: %@", selectedContact.telephone);
+            [self call];
             break;
         case 1:
-            // [self sendEmail];
             NSLog(@"send e-mail to: %@", selectedContact.email);
+            [self sendEmail];
             break;
         case 2:
-            // [self showMap];
             NSLog(@"show map: %@", selectedContact.address);
+            [self showMap];
             break;
         case 3:
-            // [self goToSite];
             NSLog(@"go to site: %@", selectedContact.site);
+            [self goToSite];
             break;
     }
 }
@@ -135,6 +135,49 @@
     cell.textLabel.text = c.name;
     
     return cell;
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)call {
+    UIDevice* device = [UIDevice currentDevice];
+    if ([device.model isEqualToString:@"iPhone"]) {
+        NSString* phoneUrl = [NSString stringWithFormat:@"telprompt:%@", selectedContact.telephone];
+        [self openAppWithUrl:phoneUrl];
+    }
+    else {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Not Supported" message:@"This option is not available on this device." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
+- (void)sendEmail {
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController* mail = [[MFMailComposeViewController alloc] init];
+        mail.mailComposeDelegate = self;
+        [mail setToRecipients:@[selectedContact.email]];
+        [self presentViewController:mail animated:YES completion:nil];
+    }
+    else {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Not Available" message:@"This option is not available at this moment." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
+- (void)showMap {
+    NSString* mapUrl = [[NSString stringWithFormat:@"http://maps.google.com/maps?q=%@", selectedContact.address] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [self openAppWithUrl:mapUrl];
+}
+
+- (void)goToSite {
+    NSString* siteUrl = [NSString stringWithFormat:@"%@", selectedContact.site];
+    [self openAppWithUrl:siteUrl];
+}
+
+- (void)openAppWithUrl:(NSString*)url {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 }
 
 @end

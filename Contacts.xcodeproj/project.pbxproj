@@ -20,6 +20,7 @@
 		A5A01B8718E6F107001FCE87 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A01B8618E6F107001FCE87 /* Default.png */; };
 		A5A01B8918E6F107001FCE87 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A01B8818E6F107001FCE87 /* Default@2x.png */; };
 		A5A01B8B18E6F107001FCE87 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A01B8A18E6F107001FCE87 /* Default-568h@2x.png */; };
+		A5B7CD0218F0917400538B7A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B7CD0118F0917300538B7A /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		A5A01B8818E6F107001FCE87 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A5A01B8A18E6F107001FCE87 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A5B7CD0018F06A5100538B7A /* ContactFormViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactFormViewControllerDelegate.h; sourceTree = "<group>"; };
+		A5B7CD0118F0917300538B7A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5B7CD0218F0917400538B7A /* MessageUI.framework in Frameworks */,
 				A5A01B7518E6F107001FCE87 /* UIKit.framework in Frameworks */,
 				A5A01B7718E6F107001FCE87 /* Foundation.framework in Frameworks */,
 				A5A01B7918E6F107001FCE87 /* CoreGraphics.framework in Frameworks */,
@@ -80,6 +83,7 @@
 		A5A01B7318E6F107001FCE87 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5B7CD0118F0917300538B7A /* MessageUI.framework */,
 				A5A01B7418E6F107001FCE87 /* UIKit.framework */,
 				A5A01B7618E6F107001FCE87 /* Foundation.framework */,
 				A5A01B7818E6F107001FCE87 /* CoreGraphics.framework */,
