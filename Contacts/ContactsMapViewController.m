@@ -43,6 +43,8 @@
     
     MKUserTrackingBarButtonItem* btn = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.map];
     self.navigationItem.rightBarButtonItem = btn;
+    
+    self.map.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -59,6 +61,32 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (MKAnnotationView*)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    static NSString* pool = @"pool";
+    if ([annotation isKindOfClass:[MKUserLocation class]]) {
+        return nil;
+    }
+
+    MKPinAnnotationView* pin = (MKPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:pool];
+    if (!pin) {
+        pin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pool];
+    }
+    else {
+        pin.annotation = annotation;
+    }
+    pin.pinColor = MKPinAnnotationColorRed;
+    pin.canShowCallout = YES;
+    
+    Contact* contact = (Contact*) annotation;
+    if (contact.photo) {
+        UIImageView* photo = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 32, 32)];
+        photo.image = contact.photo;
+        pin.leftCalloutAccessoryView = photo;
+    }
+    
+    return pin;
 }
 
 @end
