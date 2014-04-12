@@ -32,5 +32,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *site;
 @property (weak, nonatomic) IBOutlet UITextField *latitude;
 @property (weak, nonatomic) IBOutlet UITextField *longitude;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *progress;
+@property (weak, nonatomic) IBOutlet UIButton *gps;
 
 @end

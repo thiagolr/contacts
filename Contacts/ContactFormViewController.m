@@ -139,8 +139,12 @@
 }
 
 - (IBAction)getCoords:(id)sender {
+    [self.progress startAnimating];
+    self.gps.hidden = YES;
     CLGeocoder* geocoder = [[CLGeocoder alloc] init];
     [geocoder geocodeAddressString:self.address.text completionHandler:^(NSArray* results, NSError* error) {
+        [self.progress stopAnimating];
+        self.gps.hidden = NO;
         if (!error && [results count] > 0) {
             CLPlacemark* placemark = results[0];
             CLLocationCoordinate2D coordinate = placemark.location.coordinate;
