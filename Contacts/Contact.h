@@ -10,6 +10,7 @@
 
 @interface Contact : NSObject <NSCoding>
 
+@property (strong, atomic) UIImage* photo;
 @property (strong, atomic) NSString* name;
 @property (strong, atomic) NSString* telephone;
 @property (strong, atomic) NSString* email;

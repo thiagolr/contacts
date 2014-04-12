@@ -61,6 +61,10 @@
     // Do any additional setup after loading the view from its nib.
     
     if (self.contact) {
+        if (self.contact.photo) {
+            [self.photo setBackgroundImage:self.contact.photo forState:UIControlStateNormal];
+            self.photo.titleLabel.text = nil;
+        }
         self.name.text = self.contact.name;
         self.telephone.text = self.contact.telephone;
         self.email.text = self.contact.email;
@@ -78,6 +82,10 @@
 - (Contact*)getContact {
     if (!self.contact) {
         self.contact = [[Contact alloc] init];
+    }
+    
+    if (self.photo.imageView.image) {
+        self.contact.photo = self.photo.imageView.image;
     }
     
     self.contact.name = self.name.text;
@@ -128,7 +136,8 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage* image = info[UIImagePickerControllerEditedImage];
-    [self.photo setBackgroundImage:image forState:UIControlStateNormal];
+    self.photo.titleLabel.text = nil;
+    [self.photo setImage:image forState:UIControlStateNormal];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

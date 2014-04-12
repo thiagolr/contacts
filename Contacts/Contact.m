@@ -13,6 +13,7 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
     if (self) {
+        self.photo = [aDecoder decodeObjectForKey:@"photo"];
         self.name = [aDecoder decodeObjectForKey:@"name"];
         self.telephone = [aDecoder decodeObjectForKey:@"telephone"];
         self.email = [aDecoder decodeObjectForKey:@"email"];
@@ -23,6 +24,7 @@
 }
 
 - (void)encodeWithCoder:(NSCoder*)aCoder {
+    [aCoder encodeObject:self.photo forKey:@"photo"];
     [aCoder encodeObject:self.name forKey:@"name"];
     [aCoder encodeObject:self.telephone forKey:@"telephone"];
     [aCoder encodeObject:self.email forKey:@"email"];
@@ -31,7 +33,7 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%@ <%@>", self.name, self.email];
+    return [NSString stringWithFormat:@"%@ <%@> photo=%@", self.name, self.email, self.photo];
 }
 
 @end
