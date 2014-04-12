@@ -70,6 +70,8 @@
         self.email.text = self.contact.email;
         self.address.text = self.contact.address;
         self.site.text = self.contact.site;
+        self.latitude.text = self.contact.latitude.stringValue;
+        self.longitude.text = self.contact.longitude.stringValue;
     }
 }
 
@@ -93,6 +95,8 @@
     self.contact.email = self.email.text;
     self.contact.address = self.address.text;
     self.contact.site = self.site.text;
+    self.contact.latitude = [NSNumber numberWithDouble:[self.latitude.text doubleValue]];
+    self.contact.longitude = [NSNumber numberWithDouble:[self.longitude.text doubleValue]];
     
     return self.contact;
 }

@@ -28,5 +28,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *email;
 @property (weak, nonatomic) IBOutlet UITextField *address;
 @property (weak, nonatomic) IBOutlet UITextField *site;
+@property (weak, nonatomic) IBOutlet UITextField *latitude;
+@property (weak, nonatomic) IBOutlet UITextField *longitude;
 
 @end

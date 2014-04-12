@@ -19,6 +19,8 @@
         self.email = [aDecoder decodeObjectForKey:@"email"];
         self.address = [aDecoder decodeObjectForKey:@"address"];
         self.site = [aDecoder decodeObjectForKey:@"site"];
+        self.latitude = [aDecoder decodeObjectForKey:@"latitude"];
+        self.longitude = [aDecoder decodeObjectForKey:@"longitude"];
     }
     return self;
 }
@@ -30,6 +32,8 @@
     [aCoder encodeObject:self.email forKey:@"email"];
     [aCoder encodeObject:self.address forKey:@"address"];
     [aCoder encodeObject:self.site forKey:@"site"];
+    [aCoder encodeObject:self.latitude forKey:@"latitude"];
+    [aCoder encodeObject:self.longitude forKey:@"longitude"];
 }
 
 - (NSString *)description {
