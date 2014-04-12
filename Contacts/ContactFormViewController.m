@@ -138,6 +138,18 @@
     }
 }
 
+- (IBAction)getCoords:(id)sender {
+    CLGeocoder* geocoder = [[CLGeocoder alloc] init];
+    [geocoder geocodeAddressString:self.address.text completionHandler:^(NSArray* results, NSError* error) {
+        if (!error && [results count] > 0) {
+            CLPlacemark* placemark = results[0];
+            CLLocationCoordinate2D coordinate = placemark.location.coordinate;
+            self.latitude.text = [NSString stringWithFormat:@"%f", coordinate.latitude];
+            self.longitude.text = [NSString stringWithFormat:@"%f", coordinate.longitude];
+        }
+    }];
+}
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage* image = info[UIImagePickerControllerEditedImage];
     self.photo.titleLabel.text = nil;

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 #import "ContactListViewController.h"
 #import "ContactFormViewControllerDelegate.h"
@@ -18,6 +19,7 @@
 
 - (IBAction)nextField:(UITextField*)currentField;
 - (IBAction)selectPhoto:(id)sender;
+- (IBAction)getCoords:(id)sender;
 
 @property (weak, atomic) id<ContactFormViewControllerDelegate> delegate;
 @property (strong, atomic) Contact* contact;
