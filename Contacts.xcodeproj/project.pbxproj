@@ -15,11 +15,21 @@
 		A5A01B7F18E6F107001FCE87 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5A01B7D18E6F107001FCE87 /* InfoPlist.strings */; };
 		A5A01B8118E6F107001FCE87 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A01B8018E6F107001FCE87 /* main.m */; };
 		A5A01B8518E6F107001FCE87 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A01B8418E6F107001FCE87 /* AppDelegate.m */; };
-		A5A01B8718E6F107001FCE87 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A01B8618E6F107001FCE87 /* Default.png */; };
-		A5A01B8918E6F107001FCE87 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A01B8818E6F107001FCE87 /* Default@2x.png */; };
 		A5A01B8B18E6F107001FCE87 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A01B8A18E6F107001FCE87 /* Default-568h@2x.png */; };
 		A5ACC29818F96DB20017057D /* ContactFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ACC29618F96D910017057D /* ContactFormViewController.m */; };
 		A5ACC29918F96DC10017057D /* ContactFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5ACC29718F96D910017057D /* ContactFormViewController.xib */; };
+		A5ACC29D18F976C70017057D /* ContactsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ACC29B18F976C70017057D /* ContactsMapViewController.m */; };
+		A5ACC29E18F976C70017057D /* ContactsMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5ACC29C18F976C70017057D /* ContactsMapViewController.xib */; };
+		A5ACC2A018F977B60017057D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5ACC29F18F977B60017057D /* MapKit.framework */; };
+		A5ACC2AA18F97E860017057D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A5ACC2A118F97E860017057D /* Default.png */; };
+		A5ACC2AB18F97E860017057D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5ACC2A218F97E860017057D /* Default@2x.png */; };
+		A5ACC2B218F97E860017057D /* Vila Mariana.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A5ACC2A918F97E860017057D /* Vila Mariana.gpx */; };
+		A5ACC2B818F980E90017057D /* contacts-list.png in Resources */ = {isa = PBXBuildFile; fileRef = A5ACC2B418F980E90017057D /* contacts-list.png */; };
+		A5ACC2B918F980E90017057D /* contacts-list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5ACC2B518F980E90017057D /* contacts-list@2x.png */; };
+		A5ACC2BA18F980E90017057D /* contacts-map.png in Resources */ = {isa = PBXBuildFile; fileRef = A5ACC2B618F980E90017057D /* contacts-map.png */; };
+		A5ACC2BB18F980E90017057D /* contacts-map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5ACC2B718F980E90017057D /* contacts-map@2x.png */; };
+		A5ACC2BE18F980F30017057D /* gps.png in Resources */ = {isa = PBXBuildFile; fileRef = A5ACC2BC18F980F30017057D /* gps.png */; };
+		A5ACC2BF18F980F30017057D /* gps@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5ACC2BD18F980F30017057D /* gps@2x.png */; };
 		A5B7CD0218F0917400538B7A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B7CD0118F0917300538B7A /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,12 +48,23 @@
 		A5A01B8218E6F107001FCE87 /* Contacts-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Contacts-Prefix.pch"; sourceTree = "<group>"; };
 		A5A01B8318E6F107001FCE87 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A5A01B8418E6F107001FCE87 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A5A01B8618E6F107001FCE87 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		A5A01B8818E6F107001FCE87 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A5A01B8A18E6F107001FCE87 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A5ACC29518F96D910017057D /* ContactFormViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactFormViewController.h; sourceTree = "<group>"; };
 		A5ACC29618F96D910017057D /* ContactFormViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactFormViewController.m; sourceTree = "<group>"; };
 		A5ACC29718F96D910017057D /* ContactFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactFormViewController.xib; sourceTree = "<group>"; };
+		A5ACC29A18F976C70017057D /* ContactsMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsMapViewController.h; sourceTree = "<group>"; };
+		A5ACC29B18F976C70017057D /* ContactsMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsMapViewController.m; sourceTree = "<group>"; };
+		A5ACC29C18F976C70017057D /* ContactsMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsMapViewController.xib; sourceTree = "<group>"; };
+		A5ACC29F18F977B60017057D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A5ACC2A118F97E860017057D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A5ACC2A218F97E860017057D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		A5ACC2A918F97E860017057D /* Vila Mariana.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Vila Mariana.gpx"; sourceTree = "<group>"; };
+		A5ACC2B418F980E90017057D /* contacts-list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contacts-list.png"; sourceTree = "<group>"; };
+		A5ACC2B518F980E90017057D /* contacts-list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contacts-list@2x.png"; sourceTree = "<group>"; };
+		A5ACC2B618F980E90017057D /* contacts-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contacts-map.png"; sourceTree = "<group>"; };
+		A5ACC2B718F980E90017057D /* contacts-map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contacts-map@2x.png"; sourceTree = "<group>"; };
+		A5ACC2BC18F980F30017057D /* gps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gps.png; sourceTree = "<group>"; };
+		A5ACC2BD18F980F30017057D /* gps@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gps@2x.png"; sourceTree = "<group>"; };
 		A5B7CD0018F06A5100538B7A /* ContactFormViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactFormViewControllerDelegate.h; sourceTree = "<group>"; };
 		A5B7CD0118F0917300538B7A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -53,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5ACC2A018F977B60017057D /* MapKit.framework in Frameworks */,
 				A5B7CD0218F0917400538B7A /* MessageUI.framework in Frameworks */,
 				A5A01B7518E6F107001FCE87 /* UIKit.framework in Frameworks */,
 				A5A01B7718E6F107001FCE87 /* Foundation.framework in Frameworks */,
@@ -66,6 +88,7 @@
 		A5A01B6818E6F107001FCE87 = {
 			isa = PBXGroup;
 			children = (
+				A5ACC29F18F977B60017057D /* MapKit.framework */,
 				A5A01B7A18E6F107001FCE87 /* Contacts */,
 				A5A01B7318E6F107001FCE87 /* Frameworks */,
 				A5A01B7218E6F107001FCE87 /* Products */,
@@ -98,12 +121,16 @@
 				A5A01B8418E6F107001FCE87 /* AppDelegate.m */,
 				A59E27D118E73280001860DF /* Contact.h */,
 				A59E27D218E73280001860DF /* Contact.m */,
+				A5ACC29A18F976C70017057D /* ContactsMapViewController.h */,
+				A5ACC29B18F976C70017057D /* ContactsMapViewController.m */,
+				A5ACC29C18F976C70017057D /* ContactsMapViewController.xib */,
 				A5B7CD0018F06A5100538B7A /* ContactFormViewControllerDelegate.h */,
 				A5ACC29518F96D910017057D /* ContactFormViewController.h */,
 				A5ACC29618F96D910017057D /* ContactFormViewController.m */,
 				A5ACC29718F96D910017057D /* ContactFormViewController.xib */,
 				A59E27D418E73FF4001860DF /* ContactListViewController.h */,
 				A59E27D518E73FF4001860DF /* ContactListViewController.m */,
+				A5ACC2B318F97EA80017057D /* Images */,
 				A5A01B7B18E6F107001FCE87 /* Supporting Files */,
 			);
 			path = Contacts;
@@ -113,14 +140,28 @@
 			isa = PBXGroup;
 			children = (
 				A5A01B7C18E6F107001FCE87 /* Contacts-Info.plist */,
+				A5A01B8218E6F107001FCE87 /* Contacts-Prefix.pch */,
 				A5A01B7D18E6F107001FCE87 /* InfoPlist.strings */,
 				A5A01B8018E6F107001FCE87 /* main.m */,
-				A5A01B8218E6F107001FCE87 /* Contacts-Prefix.pch */,
-				A5A01B8618E6F107001FCE87 /* Default.png */,
-				A5A01B8818E6F107001FCE87 /* Default@2x.png */,
-				A5A01B8A18E6F107001FCE87 /* Default-568h@2x.png */,
+				A5ACC2A918F97E860017057D /* Vila Mariana.gpx */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5ACC2B318F97EA80017057D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A5ACC2B418F980E90017057D /* contacts-list.png */,
+				A5ACC2B518F980E90017057D /* contacts-list@2x.png */,
+				A5ACC2B618F980E90017057D /* contacts-map.png */,
+				A5ACC2B718F980E90017057D /* contacts-map@2x.png */,
+				A5A01B8A18E6F107001FCE87 /* Default-568h@2x.png */,
+				A5ACC2A118F97E860017057D /* Default.png */,
+				A5ACC2A218F97E860017057D /* Default@2x.png */,
+				A5ACC2BC18F980F30017057D /* gps.png */,
+				A5ACC2BD18F980F30017057D /* gps@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,9 +217,17 @@
 			files = (
 				A5ACC29918F96DC10017057D /* ContactFormViewController.xib in Resources */,
 				A5A01B7F18E6F107001FCE87 /* InfoPlist.strings in Resources */,
-				A5A01B8718E6F107001FCE87 /* Default.png in Resources */,
-				A5A01B8918E6F107001FCE87 /* Default@2x.png in Resources */,
 				A5A01B8B18E6F107001FCE87 /* Default-568h@2x.png in Resources */,
+				A5ACC29E18F976C70017057D /* ContactsMapViewController.xib in Resources */,
+				A5ACC2AA18F97E860017057D /* Default.png in Resources */,
+				A5ACC2AB18F97E860017057D /* Default@2x.png in Resources */,
+				A5ACC2B218F97E860017057D /* Vila Mariana.gpx in Resources */,
+				A5ACC2B818F980E90017057D /* contacts-list.png in Resources */,
+				A5ACC2B918F980E90017057D /* contacts-list@2x.png in Resources */,
+				A5ACC2BA18F980E90017057D /* contacts-map.png in Resources */,
+				A5ACC2BB18F980E90017057D /* contacts-map@2x.png in Resources */,
+				A5ACC2BE18F980F30017057D /* gps.png in Resources */,
+				A5ACC2BF18F980F30017057D /* gps@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +243,7 @@
 				A5A01B8518E6F107001FCE87 /* AppDelegate.m in Sources */,
 				A59E27D318E73280001860DF /* Contact.m in Sources */,
 				A59E27D618E73FF4001860DF /* ContactListViewController.m in Sources */,
+				A5ACC29D18F976C70017057D /* ContactsMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

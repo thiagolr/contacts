@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ContactListViewController.h"
+#import "ContactsMapViewController.h"
 
 @implementation AppDelegate
 
@@ -27,9 +28,15 @@
     ContactListViewController* list = [[ContactListViewController alloc] init];
     list.contacts = self.contacts;
     
-    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:list];
+    ContactsMapViewController* map = [[ContactsMapViewController alloc] init];
     
-    self.window.rootViewController = nav;
+    UINavigationController* nav1 = [[UINavigationController alloc] initWithRootViewController:list];
+    UINavigationController* nav2 = [[UINavigationController alloc] initWithRootViewController:map];
+
+    UITabBarController* tab = [[UITabBarController alloc] init];
+    tab.viewControllers = @[nav1, nav2];
+    
+    self.window.rootViewController = tab;
     
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];

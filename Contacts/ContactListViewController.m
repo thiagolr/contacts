@@ -21,6 +21,10 @@
         self.navigationItem.title = @"Contacts";
         self.navigationItem.rightBarButtonItem = btnRight;
         self.navigationItem.leftBarButtonItem = self.editButtonItem;
+        
+        UIImage* tabImage = [UIImage imageNamed:@"contacts-list"];
+        UITabBarItem* tabItem = [[UITabBarItem alloc] initWithTitle:@"Contacts" image:tabImage tag:0];
+        self.tabBarItem = tabItem;
     }
     return self;
 }

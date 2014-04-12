@@ -33,7 +33,7 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%@ <%@> photo=%@", self.name, self.email, self.photo];
+    return [NSString stringWithFormat:@"%@ <%@>", self.name, self.email];
 }
 
 @end
