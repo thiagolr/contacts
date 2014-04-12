@@ -36,6 +36,10 @@
     [aCoder encodeObject:self.longitude forKey:@"longitude"];
 }
 
+- (CLLocationCoordinate2D)coordinate {
+    return CLLocationCoordinate2DMake(self.latitude.doubleValue, self.longitude.doubleValue);
+}
+
 - (NSString *)description {
     return [NSString stringWithFormat:@"%@ <%@>", self.name, self.email];
 }

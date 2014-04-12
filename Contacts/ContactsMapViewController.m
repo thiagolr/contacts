@@ -45,6 +45,16 @@
     self.navigationItem.rightBarButtonItem = btn;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.map addAnnotations:self.contacts];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [self.map removeAnnotations:self.contacts];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

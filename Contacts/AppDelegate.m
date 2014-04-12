@@ -29,6 +29,7 @@
     list.contacts = self.contacts;
     
     ContactsMapViewController* map = [[ContactsMapViewController alloc] init];
+    map.contacts = self.contacts;
     
     UINavigationController* nav1 = [[UINavigationController alloc] initWithRootViewController:list];
     UINavigationController* nav2 = [[UINavigationController alloc] initWithRootViewController:map];
