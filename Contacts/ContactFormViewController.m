@@ -1,5 +1,5 @@
 //
-//  FormularioContatoViewController.m
+//  ContactFormViewController.m
 //  Contacts
 //
 //  Created by ios4341 on 29/03/14.
@@ -111,6 +111,25 @@
 
 - (IBAction)nextField:(UITextField *)currentField {
     [[self.view viewWithTag:(currentField.tag + 1)] becomeFirstResponder];
+}
+
+- (IBAction)selectPhoto:(id)sender {
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        
+    }
+    else {
+        UIImagePickerController* picker = [[UIImagePickerController alloc] init];
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        picker.allowsEditing = YES;
+        picker.delegate = self;
+        [self presentViewController:picker animated:YES completion:nil];
+    }
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage* image = info[UIImagePickerControllerEditedImage];
+    [self.photo setBackgroundImage:image forState:UIControlStateNormal];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)finish {

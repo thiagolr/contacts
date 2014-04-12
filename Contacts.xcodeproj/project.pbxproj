@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A59E27B218E6F64C001860DF /* ContactFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59E27B018E6F64C001860DF /* ContactFormViewController.m */; };
-		A59E27B318E6F64C001860DF /* ContactFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A59E27B118E6F64C001860DF /* ContactFormViewController.xib */; };
 		A59E27D318E73280001860DF /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = A59E27D218E73280001860DF /* Contact.m */; };
 		A59E27D618E73FF4001860DF /* ContactListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59E27D518E73FF4001860DF /* ContactListViewController.m */; };
 		A5A01B7518E6F107001FCE87 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A01B7418E6F107001FCE87 /* UIKit.framework */; };
@@ -20,13 +18,12 @@
 		A5A01B8718E6F107001FCE87 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A01B8618E6F107001FCE87 /* Default.png */; };
 		A5A01B8918E6F107001FCE87 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A01B8818E6F107001FCE87 /* Default@2x.png */; };
 		A5A01B8B18E6F107001FCE87 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A01B8A18E6F107001FCE87 /* Default-568h@2x.png */; };
+		A5ACC29818F96DB20017057D /* ContactFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ACC29618F96D910017057D /* ContactFormViewController.m */; };
+		A5ACC29918F96DC10017057D /* ContactFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5ACC29718F96D910017057D /* ContactFormViewController.xib */; };
 		A5B7CD0218F0917400538B7A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B7CD0118F0917300538B7A /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A59E27AF18E6F64C001860DF /* ContactFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactFormViewController.h; sourceTree = "<group>"; };
-		A59E27B018E6F64C001860DF /* ContactFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactFormViewController.m; sourceTree = "<group>"; };
-		A59E27B118E6F64C001860DF /* ContactFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactFormViewController.xib; sourceTree = "<group>"; };
 		A59E27D118E73280001860DF /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
 		A59E27D218E73280001860DF /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 		A59E27D418E73FF4001860DF /* ContactListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListViewController.h; sourceTree = "<group>"; };
@@ -44,6 +41,9 @@
 		A5A01B8618E6F107001FCE87 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A5A01B8818E6F107001FCE87 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A5A01B8A18E6F107001FCE87 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A5ACC29518F96D910017057D /* ContactFormViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactFormViewController.h; sourceTree = "<group>"; };
+		A5ACC29618F96D910017057D /* ContactFormViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactFormViewController.m; sourceTree = "<group>"; };
+		A5ACC29718F96D910017057D /* ContactFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactFormViewController.xib; sourceTree = "<group>"; };
 		A5B7CD0018F06A5100538B7A /* ContactFormViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactFormViewControllerDelegate.h; sourceTree = "<group>"; };
 		A5B7CD0118F0917300538B7A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -98,10 +98,10 @@
 				A5A01B8418E6F107001FCE87 /* AppDelegate.m */,
 				A59E27D118E73280001860DF /* Contact.h */,
 				A59E27D218E73280001860DF /* Contact.m */,
-				A59E27AF18E6F64C001860DF /* ContactFormViewController.h */,
-				A59E27B018E6F64C001860DF /* ContactFormViewController.m */,
-				A59E27B118E6F64C001860DF /* ContactFormViewController.xib */,
 				A5B7CD0018F06A5100538B7A /* ContactFormViewControllerDelegate.h */,
+				A5ACC29518F96D910017057D /* ContactFormViewController.h */,
+				A5ACC29618F96D910017057D /* ContactFormViewController.m */,
+				A5ACC29718F96D910017057D /* ContactFormViewController.xib */,
 				A59E27D418E73FF4001860DF /* ContactListViewController.h */,
 				A59E27D518E73FF4001860DF /* ContactListViewController.m */,
 				A5A01B7B18E6F107001FCE87 /* Supporting Files */,
@@ -174,11 +174,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5ACC29918F96DC10017057D /* ContactFormViewController.xib in Resources */,
 				A5A01B7F18E6F107001FCE87 /* InfoPlist.strings in Resources */,
 				A5A01B8718E6F107001FCE87 /* Default.png in Resources */,
 				A5A01B8918E6F107001FCE87 /* Default@2x.png in Resources */,
 				A5A01B8B18E6F107001FCE87 /* Default-568h@2x.png in Resources */,
-				A59E27B318E6F64C001860DF /* ContactFormViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,9 +189,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5ACC29818F96DB20017057D /* ContactFormViewController.m in Sources */,
 				A5A01B8118E6F107001FCE87 /* main.m in Sources */,
 				A5A01B8518E6F107001FCE87 /* AppDelegate.m in Sources */,
-				A59E27B218E6F64C001860DF /* ContactFormViewController.m in Sources */,
 				A59E27D318E73280001860DF /* Contact.m in Sources */,
 				A59E27D618E73FF4001860DF /* ContactListViewController.m in Sources */,
 			);
