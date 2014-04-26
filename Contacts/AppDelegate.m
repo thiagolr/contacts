@@ -21,8 +21,10 @@
     //NSArray* docDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     //NSString* docDir = docDirs[0];
     //self.filename = [NSString stringWithFormat:@"%@/contacts", docDir];
-    
     //self.contacts = [NSKeyedUnarchiver unarchiveObjectWithFile:self.filename];
+    
+    [self createContact];
+    
     self.contacts = [self loadContacts];
     if (!self.contacts) {
         self.contacts = [[NSMutableArray alloc] init];
@@ -92,6 +94,25 @@
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
+    }
+}
+
+- (void) createContact {
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    BOOL alreadyRun = [defaults boolForKey:@"br.org.venturus.Contacts.config.already_run"];
+    if (!alreadyRun) {
+        Contact* contact = [NSEntityDescription insertNewObjectForEntityForName:@"Contact" inManagedObjectContext:self.managedObjectContext];
+        contact.name = @"Caelum SP";
+        contact.telephone = @"01155712571";
+        contact.address = @"São Paulo, SP, Rua Vergueiro, 3185";
+        contact.site = @"http://www.caelum.com.br";
+        contact.latitude = @(-23.5883034);
+        contact.longitude = @(-46.632369);
+        
+        [self saveContext];
+        
+        [defaults setBool:YES forKey:@"br.org.venturus.Contacts.config.already_run"];
+        [defaults synchronize];
     }
 }
 
