@@ -32,6 +32,8 @@
 		A5ACC2BE18F980F30017057D /* gps.png in Resources */ = {isa = PBXBuildFile; fileRef = A5ACC2BC18F980F30017057D /* gps.png */; };
 		A5ACC2BF18F980F30017057D /* gps@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5ACC2BD18F980F30017057D /* gps@2x.png */; };
 		A5B7CD0218F0917400538B7A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B7CD0118F0917300538B7A /* MessageUI.framework */; };
+		A5F0422A190BE49500FE7D9C /* Contacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5F04228190BE49500FE7D9C /* Contacts.xcdatamodeld */; };
+		A5F0425A190BF0B000FE7D9C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F04259190BF0B000FE7D9C /* CoreData.framework */; };
 		F63B3B747F3B46ED8106E6AE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F00A984E4C42FB8E4EB0BB /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		A5ACC2BD18F980F30017057D /* gps@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gps@2x.png"; sourceTree = "<group>"; };
 		A5B7CD0018F06A5100538B7A /* ContactFormViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactFormViewControllerDelegate.h; sourceTree = "<group>"; };
 		A5B7CD0118F0917300538B7A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		A5F04229190BE49500FE7D9C /* Contacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Contacts.xcdatamodel; sourceTree = "<group>"; };
+		A5F04259190BF0B000FE7D9C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EDBF2F1400554EC987582499 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5F0425A190BF0B000FE7D9C /* CoreData.framework in Frameworks */,
 				A557E42418F9B8D20066D391 /* CoreLocation.framework in Frameworks */,
 				A5ACC2A018F977B60017057D /* MapKit.framework in Frameworks */,
 				A5B7CD0218F0917400538B7A /* MessageUI.framework in Frameworks */,
@@ -113,6 +118,7 @@
 		A5A01B7318E6F107001FCE87 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5F04259190BF0B000FE7D9C /* CoreData.framework */,
 				A557E42318F9B8D20066D391 /* CoreLocation.framework */,
 				A5ACC29F18F977B60017057D /* MapKit.framework */,
 				A5B7CD0118F0917300538B7A /* MessageUI.framework */,
@@ -131,6 +137,7 @@
 				A5A01B8418E6F107001FCE87 /* AppDelegate.m */,
 				A59E27D118E73280001860DF /* Contact.h */,
 				A59E27D218E73280001860DF /* Contact.m */,
+				A5F04228190BE49500FE7D9C /* Contacts.xcdatamodeld */,
 				A5ACC29A18F976C70017057D /* ContactsMapViewController.h */,
 				A5ACC29B18F976C70017057D /* ContactsMapViewController.m */,
 				A5ACC29C18F976C70017057D /* ContactsMapViewController.xib */,
@@ -289,6 +296,7 @@
 				A59E27D318E73280001860DF /* Contact.m in Sources */,
 				A59E27D618E73FF4001860DF /* ContactListViewController.m in Sources */,
 				A5ACC29D18F976C70017057D /* ContactsMapViewController.m in Sources */,
+				A5F0422A190BE49500FE7D9C /* Contacts.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +416,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A5F04228190BE49500FE7D9C /* Contacts.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A5F04229190BE49500FE7D9C /* Contacts.xcdatamodel */,
+			);
+			currentVersion = A5F04229190BE49500FE7D9C /* Contacts.xcdatamodel */;
+			path = Contacts.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A5A01B6918E6F107001FCE87 /* Project object */;
 }

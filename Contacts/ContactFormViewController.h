@@ -21,6 +21,8 @@
 - (IBAction)selectPhoto:(id)sender;
 - (IBAction)getCoords:(id)sender;
 
+@property (weak, nonatomic) NSManagedObjectContext *context;
+
 @property (weak, atomic) id<ContactFormViewControllerDelegate> delegate;
 @property (strong, atomic) Contact* contact;
 

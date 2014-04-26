@@ -83,7 +83,7 @@
 
 - (Contact*)getContact {
     if (!self.contact) {
-        self.contact = [[Contact alloc] init];
+        self.contact = [NSEntityDescription insertNewObjectForEntityForName:@"Contact" inManagedObjectContext:self.context];
     }
     
     if (self.photo.imageView.image) {

@@ -10,6 +10,8 @@
 
 @implementation Contact
 
+@dynamic name, telephone, email, address, site, latitude, longitude, photo;
+
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
     if (self) {

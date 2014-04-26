@@ -20,6 +20,8 @@
 
 @property (weak, atomic) NSMutableArray *contacts;
 
+@property (weak, nonatomic) NSManagedObjectContext *context;
+
 @property (strong, atomic) NSIndexPath* selected;
 
 - (void) addContact:(Contact*)contact;
